@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div style="width: 100%; height:89%; display: flex; justify-content: center;">
+  <div class="box-set">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src="../../../assets/A N I H O T.svg" alt="" class="logo-set">
+      <div class="rank-set">
+        <img src="../../../assets/hot.svg" alt="">
+        <h1 style="margin-left: 0.2vw;">Ranking</h1>
+      </div>
+    </div>
+    <div class="content-box">
+      <div *ngFor="let rk of rank.slice(0, 10); let i = index">
+        <div class="set-content-box">
+          <div *ngIf="rk.YestRank > rk.CurRank" class="set-diff">
+            <img src="../../../assets/up2.svg" alt="" style="margin-right: 0.5vw;">
+            <span style="color: #1cd000;" class="rank-up-down">{{rk.diffRank}}</span>
+          </div>
+          <div *ngIf="rk.CurRank > rk.YestRank" class="set-diff">
+            <img src="../../../assets/down.svg" alt="" style="margin-right: 0.5vw;">
+            <span style="color: #ff2424;" class="rank-up-down">-{{rk.diffRank}}</span>
+          </div>
+          <div class="number-set">
+            <h2>{{i + 1}}</h2>
+          </div>
+          <img src="{{rk.img}}" alt="" class="img-set">
+          <div class="name-set">
+            <span>{{rk.name}}</span>
+          </div>
+          <div class="point-set">
+            <img src="../../../assets/hot.svg" alt="">
+            <span style="margin-left: 0.5rem;">{{rk.point}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

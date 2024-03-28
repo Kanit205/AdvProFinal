@@ -1,0 +1,32 @@
+<div style="display: flex; justify-content: space-between;">
+  <div class="Logo-set">
+    <div>
+      <img src="../../../assets/A N I H O T.svg" alt="" (click)="Home()" class="logo-click">
+    </div>
+  </div>
+  <div class="card-set">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="font-size: 1.5vw;">
+        <h1>User Login</h1>
+      </div>
+      <div>
+        <h2 class="title-bar-set">Email</h2>
+        <input type="text" class="input-bar" placeholder="Email" #email (keyup.enter)="Login(email.value, pass.value)">
+      </div>
+      <div>
+        <h2 class="title-bar-set">Password</h2>
+        <input type="password" class="input-bar" placeholder="Password" #pass (keyup.enter)="Login(email.value, pass.value)">
+      </div>
+      <div class="set-btn">
+        <div>
+          <button class="login-btn-set" (click)="Login(email.value, pass.value)">Login</button>
+        </div>
+        <div class="sign-center">
+          <div>
+            <span class="sign-set" [routerLink]="['/Register']">Sign UP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

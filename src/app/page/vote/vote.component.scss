@@ -1,0 +1,36 @@
+.set-pic {
+  object-fit: cover;
+  width: 370px;
+  height: 370px;
+  border-radius: 20px;
+}
+
+.card-set {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.card-set:hover {
+  margin-bottom: 1.5rem;
+  color: #ce6f00;
+}
+
+.OR-set {
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.vote-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+

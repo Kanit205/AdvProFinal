@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="box-set">
+  <div *ngFor="let us of user.slice(0, more)">
+    <div class="charac-box-set">
+      <div class="box-img-set">
+        <img src="{{us.image}}" alt="" class="img-set" *ngIf="us.image !== null">
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" class="img-set" *ngIf="us.image === null">
+      </div>
+      <div style="display: flex; flex-direction: column; width: 15vw; margin-left: 1rem;">
+        <div class="box-name-set">
+          <span>{{us.name}} <span style="color: #CE6F00;">#{{us.uid}}</span></span>
+        </div>
+        <div class="box-mail-set">
+          <span>{{us.email}}</span>
+        </div>
+      </div>
+      <div class="box-limit-set">
+        <span>Have Character Image :</span>
+        <span *ngIf="us.img_limit < 5">
+          <span style="color: #CE6F00;"> {{us.img_limit}}</span>
+          / 5
+        </span>
+        <span *ngIf="us.img_limit >= 5" style="color: #CE6F00;"> MAX</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 2rem; margin-bottom: 3rem;">
+    <button (click)="showmore()" class="showmore-btn" *ngIf="user.length > more">Show More</button>
+  </div>
+</div>

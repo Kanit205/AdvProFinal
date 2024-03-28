@@ -1,0 +1,55 @@
+.bg-set {
+  background-color: #0000003b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.layout-logo {
+  display: flex;
+  margin-left: 15vw;
+  align-items: center;
+  width: 30vw;
+}
+
+.layout-logo2 {
+  display: flex;
+  margin-left: 15vw;
+  align-items: center;
+  width: 26vw;
+}
+
+.logo-set {
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.logo-set:hover {
+  scale: 1.1;
+}
+
+.text-menu-set {
+  font-weight: 500;
+  margin-right: 4vw;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.text-menu-set:hover {
+  color: #ce6e00c4;
+  scale: 0.9;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: 0.2s;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.profile-img:hover {
+  scale: 0.9;
+}

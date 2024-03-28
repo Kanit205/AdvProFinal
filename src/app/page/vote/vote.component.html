@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div *ngIf="Charac2.length > 0;" class="vote-box">
+  <div class="card-set" (click)="vote(0)">
+    <img src="{{Charac2[0].image}}" alt="" class="set-pic">
+    <h1>{{Charac2[0].name}}</h1>
+  </div>
+  <h1 class="OR-set">OR</h1>
+  <div class="card-set" (click)="vote(1)">
+    <img src="{{Charac2[1].image}}" alt="" class="set-pic">
+    <h1>{{Charac2[1].name}}</h1>
+  </div>
+</div>
+
+
+
+
+<!-- <div style="display: flex; justify-content: center;">
+  <div>
+    <h2 style="color: #34c300;">Winner: {{winner?.name}}</h2>
+    <img src="{{winner?.image}}" alt="" style="object-fit: cover; width: 150px; height: 150px; border-radius: 50%;">
+  </div>
+  <div style="margin-left: 3vw;">
+    <h2 style="color: #c30000;">Loser: {{loser?.name}}</h2>
+    <img src="{{loser?.image}}" alt="" style="object-fit: cover; width: 150px; height: 150px; border-radius: 50%;">
+  </div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <h3>คำนวณหาค่าความคาดหวังของแต่ละรูป</h3>
+  <div>
+    <img src="https://miro.medium.com/v2/resize:fit:2356/1*UKxzABAH0ZSswRe83Y6kpw.png" alt=""
+      style="object-fit: cover; width: 250px;">
+    <img src="https://miro.medium.com/v2/resize:fit:2404/1*eBze5LbMPWzH_jxoPGoImQ.png" alt=""
+      style="object-fit: cover; width: 250px;">
+  </div>
+  <div style="display: flex; flex-direction: column;">
+    <span>Ea = 1 / (1 + 10 ** (({{this.loser?.total_point}} - {{this.winner?.total_point}}) / 400)) = {{Ea}}</span>
+    <span>Eb = 1 / (1 + 10 ** (({{this.winner?.total_point}} - {{this.loser?.total_point}}) / 400)) = {{Eb}}</span>
+  </div>
+  <h3>คำนวณคะแนนใหม่ของแต่ละรูป</h3>
+  <div>
+    <img src="https://miro.medium.com/v2/resize:fit:1400/1*0ieY3WCOi8xgQ42nuqhICQ.png" alt=""
+      style="object-fit: cover; width: 250px;">
+  </div>
+  <div style="display: flex;">
+    <span>Ra = {{winner?.total_point}} + {{k}} * (1 - {{Ea}}) = <span style="color: #34c300;">{{Ra}}</span></span>
+    <span>Rb = {{loser?.total_point}} + {{k}} * (0 - {{Eb}}) = <span style="color: #c30000;">{{Rb}}</span></span>
+  </div>
+</div> -->

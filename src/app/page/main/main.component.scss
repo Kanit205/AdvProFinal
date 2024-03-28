@@ -1,0 +1,41 @@
+.title-lay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55vw;
+  height: 80vh;
+}
+
+.btn-set-lay {
+  width: 30vw;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-title-set {
+  display: flex;
+  flex-wrap: wrap;
+  width: 24vw;
+  color: #ffffff;
+}
+
+.btn {
+  background-color: #CE6F00;
+  border: none;
+  width: 165px;
+  height: 85px;
+  color: #ffffff;
+  border-radius: 50px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #ffffffc0;
+  background-color: #ce6e00b0;
+  scale: 1.3;
+}
+
+

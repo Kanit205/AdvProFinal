@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div class="set-head-div" *ngIf="changepage === 0; else changepass">
+  <diV class="box-set">
+    <h1 style="display: flex; color: #FFFFFF; margin-left: 3vw;">
+      <span>P</span>
+      <span class="CE6F00">ro</span>
+      <span>f</span>
+      <span class="CE6F00">ile</span>
+    </h1>
+    <input type="file" hidden (change)="onFileSelected($event)" #proimg>
+    <img src="{{profile?.image}}" alt="" class="img-set" *ngIf="profile?.image !== null" (click)="proimg.click()">
+    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""
+      class="img-set" *ngIf="profile?.image === null" (click)="proimg.click()">
+    <div style="margin-left: 7vw; margin-top: 3.5vw;">
+      <div style="display: flex;">
+        <h2 class="title-set">Username:</h2>
+        <div class="box-bar-set">
+          <input type="text" class="name-bar" placeholder="Username" value="{{profile?.name}}" #name>
+          <button class="btn-save" (click)="updatename(name.value)">Save</button>
+        </div>
+      </div>
+      <div class="data-set-box">
+        <h2 class="title-set">
+          <span style="margin-left: 2.7vw;">Email: </span>
+          <span>&nbsp;{{profile?.email}}</span>
+          <span class="CE6F00">&nbsp;#{{profile?.uid}}</span>
+        </h2>
+        <button class="pass-btn" (click)="ChangePage()">Change Password</button>
+      </div>
+    </div>
+  </diV>
+  <div class="box-set" style="margin-top: 1rem; flex-direction: column;">
+    <h1 style="color: #FFFFFF; margin-left: 3vw; margin-top: 3rem;">
+      <span class="CE6F00">{{profile?.img_limit}}</span>
+      <span> / 5 Limit Image</span>
+    </h1>
+    <div class="image-head-set">
+      <div *ngFor="let img of character" class="img-set-posi">
+        <img src="{{img.image}}" alt="" class="img-character-set" (click)="info(img.cid)">
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #changepass>
+  <div style="display: flex; justify-content: center;">
+    <div class="head-box-set">
+      <div class="card-set">
+        <div class="flex-col-center">
+          <div style="width: 320px;">
+            <div style="font-size: 25px; margin-top: 3rem;">
+              <h1>Change Password</h1>
+            </div>
+            <div style="margin-top: 3rem;">
+              <div>
+                <h2 class="sec-set">Email</h2>
+                <input type="text" placeholder="Email" class="input-bar-set" #email>
+              </div>
+              <div>
+                <h2 class="sec-set">Enter New Password</h2>
+                <input type="password" placeholder="New Password" class="input-bar-set" #newpass>
+              </div>
+              <div>
+                <h2 class="sec-set">Confirm Password</h2>
+                <input type="password" placeholder="Confirm Password" class="input-bar-set" #conpass>
+              </div>
+              <div style="margin-top: 2rem;">
+                <button class="regis-btn" (click)="ChangePass(email.value, newpass.value, conpass.value)">Change Password</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

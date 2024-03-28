@@ -1,0 +1,36 @@
+<div class="head-box-set">
+  <div class="card-set">
+    <div class="flex-col-center">
+      <div style="width: 320px;">
+        <div style="font-size: 25px; margin-top: 3rem;">
+          <h1>Sign Up</h1>
+        </div>
+        <div style="margin-top: 3rem;">
+          <div>
+            <h2 class="sec-set">Username</h2>
+            <input type="text" placeholder="Username" class="input-bar-set" #user>
+          </div>
+          <div>
+            <h2 class="sec-set">Email</h2>
+            <input type="text" placeholder="Email" class="input-bar-set" #email>
+          </div>
+          <div>
+            <h2 class="sec-set">Password</h2>
+            <input type="password" placeholder="Password" class="input-bar-set" #pass>
+          </div>
+          <div>
+            <h2 class="sec-set">Confirm Password</h2>
+            <input type="password" placeholder="Confirm Password" class="input-bar-set" #conpass>
+          </div>
+          <div style="margin-top: 1.5rem;">
+            <button class="regis-btn" (click)="regis(user.value, email.value, pass.value, conpass.value)">Register</button>
+          </div>
+          <div style="margin-top: 1.5rem;">
+            <span>Do you already have an account?</span>
+            <span class="login-btn-set" (click)="login()">Login</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="bg-set" *ngIf="type !== 1; else admin">
+  <div class="layout-logo">
+    <img src="../../../assets/A N I H O T.svg" alt="" style="width: 230px;" class="logo-set" (click)="Home()">
+  </div>
+  <div class="layout-logo" style="margin-right: 9vw;">
+    <div style="display: flex; color: #ffffffd8;">
+      <h2 class="text-menu-set" (click)="rank()">Ranking</h2>
+      <div *ngIf="status === 0">
+        <h2 class="text-menu-set" (click)="login()">Login</h2>
+      </div>
+      <div *ngIf="status === 1" style="display: flex;">
+        <h2 class="text-menu-set" (click)="upload()">Upload</h2>
+        <h2 class="text-menu-set" (click)="logout()">Logout</h2>
+        <div style="display: flex; align-items: center;">
+          <img src="{{findLogin.image}}" alt="" class="profile-img" (click)="Profile()" *ngIf="findLogin.image !== null">
+          <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" class="profile-img" (click)="Profile()" *ngIf="findLogin.image === null">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #admin>
+  <div class="bg-set">
+    <div class="layout-logo">
+      <img src="../../../assets/A N I H O T.svg" alt="" style="width: 230px;" class="logo-set" (click)="Admin()">
+    </div>
+    <div class="layout-logo2" style="margin-right: 9vw;">
+      <div style="display: flex; color: #ffffffd8;">
+        <h2 class="text-menu-set" (click)="rank()">Ranking</h2>
+        <div *ngIf="status === 0">
+          <h2 class="text-menu-set" (click)="login()">Login</h2>
+        </div>
+        <div *ngIf="status === 1" style="display: flex;">
+          <h2 class="text-menu-set">Settime</h2>
+          <h2 class="text-menu-set" (click)="logout()">Logout</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

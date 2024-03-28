@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="div-head-set">
+  <div class="box-set">
+    <div style="margin-top: 0.5rem; margin-bottom: 1rem;">
+      <h1 style="color: #ffffff;">
+          <span class="CE6F00">U</span>
+          <span>p</span>
+          <span class="CE6F00">lo</span>
+          <span>ad</span>
+      </h1>
+    </div>
+    <div *ngIf="fileUrl.length > 0 else none;" class="img-set-posi">
+      <img [src]="fileUrl" alt="" class="img-set">
+    </div>
+    <ng-template #none>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/4147/4147103.png" alt="" class="else-img-set">
+      </div>
+    </ng-template>
+    <div *ngIf="user?.img_limit! < 5">
+      <div style="color: #ffffff; margin-top: 1.5rem;">
+        <div>
+          <span style="margin-left: 4.5rem;">Image:  </span>
+          <input type="file" hidden (change)="onFileSelected($event)" #fileInput>
+          <button (click)="fileInput.click()" class="select-btn">Select File</button>
+        </div>
+        <div style="margin-top: 0.7rem;">
+          <span>Character Name:  </span>
+          <input type="text" #chaname class="name-bar" placeholder="Character Name">
+        </div>
+        <div class="div-limit-set">
+          <span style="color: #ffffff;">imgae Limit <span class="CE6F00">{{user?.img_limit}}</span> / 5</span>
+        </div>
+        <div class="btn-set">
+          <div>
+            <button class="up-btn" (click)="upload(chaname.value)">Upload</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="user?.img_limit! >= 5" style="color: #ffffff; margin-top: 1.5rem;">
+      <div class="div-limit-set">
+        <span>imgae Limit <span class="CE6F00">{{user?.img_limit}}</span> / 5</span>
+      </div>
+      <div>
+        <h2>Your Image is <span class="CE6F00">Full.</span></h2>
+      </div>
+    </div>
+  </div>
+</div>

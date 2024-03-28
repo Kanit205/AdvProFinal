@@ -1,0 +1,103 @@
+.card-set {
+  background-color: #efefef;
+  height: 100vh;
+  width: 43vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-bar {
+  background-color: #9898985b;
+  border: none;
+  width: 19vw;
+  height: 5vh;
+  border-radius: 40px;
+  text-indent: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  outline: none;
+  transition: 0.5s;
+}
+
+.input-bar:hover {
+  background-color: #989898;
+  scale: 1.1;
+}
+
+.title-bar-set {
+  margin-bottom: 6px;
+  color: #000000c2;
+  margin-left: 0.5rem;
+}
+
+.login-btn-set {
+  border: none;
+  background-color: #474747;
+  width: 7vw;
+  height: 4vh;
+  border-radius: 50px;
+  color: #efefef;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.login-btn-set:hover {
+  background-color: #1f1f1f;
+  scale: 0.9;
+}
+
+.sign-set {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0000009d;
+  cursor: pointer;
+}
+
+.sign-set:hover {
+  color: #1f1f1f;
+  text-decoration: underline;
+}
+
+.sign-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.set-btn {
+  margin-top: 1rem;
+  width: 19vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Logo-set {
+  width: 57vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-click {
+  transition: 0.5s;
+}
+
+.logo-click:hover {
+  scale: 1.1;
+}
+
+.color {
+  color: #434343;
+}
+
+.alert-btn {
+  
+}
